@@ -1,26 +1,20 @@
-# Frontend Test Enviame.io con VueJS 3
+# Frontend Marvel Characters con VueJS 3
 
 _Estas instrucciones le permitirán obtener una copia del proyecto en funcionamiento en su máquina local para propósitos de desarrollo y pruebas._
 
-## Ejercicios
-
-- Ejercicio 1: src/view/Test1.vue
-- Ejercicio 2: src/view/Test2.vue
-- Ejercicio 3: src/view/Test3.vue
-
 ## Demo 🚀
 
-[https://enviame.vercel.app/](https://enviame.vercel.app/)
+[https://marvel-roylans.vercel.app/](https://marvel-roylans.vercel.app/)
 
 ## Instalación 🔧
 
 ### Clonar el proyecto:
 
-git clone git@github.com:roylans/enviame.git
+git clone git@github.com:roylans/marvel.git
 
 ### Acceder al proyecto:
 
-cd enviame
+cd marvel
 
 ### Instalar dependencias
 
