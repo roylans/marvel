@@ -1,14 +1,6 @@
 <template>
   <div class="card" @mouseover="isOver = true" @mouseleave="isOver = false">
-    <div class="card-image">
-      <div class="btn-edit">
-        <button
-          @click="showModalEdit = !showModalEdit"
-          class="button is-small is-danger"
-        >
-          Editar
-        </button>
-      </div>
+    <div class="card-imag info_leave">
       <figure class="image is-4by3">
         <img
           :src="`${character.thumbnail.path}/landscape_incredible.${character.thumbnail.extension}`"
@@ -16,52 +8,23 @@
         />
       </figure>
     </div>
+    <div class="info__separator"></div>
     <div
-      class="card-content"
+      class="card-content info"
       :class="[
-        !showDescription ? 'info' : '',
         !isOver ? 'info__over' : 'info_leave',
       ]"
     >
       <div class="content has-text-left">
-        <p class="title is-4 has-text-white inf__title">
+        <p class="title is-7 has-text-white inf__title">
           {{ character.name }}
         </p>
-        <time class="has-text-white info__date" datetime="{{ date }}">
-          Fecha: {{ date }}
-        </time>
-        <p
-          class="mt-2 has-text-white"
-          :class="[
-            !showDescription ? 'info__description' : 'info__description-full',
-          ]"
-        >
-          {{ character.description }}
-        </p>
-        <a
-          class="has-text-white info__read"
-          href="#"
-          v-if="character.description"
-          @click.stop.prevent="showDescription = !showDescription"
-        >
-          <span v-if="!showDescription">Leer más</span>
-          <span v-else>Leer menos</span>
-        </a>
-        <br />
       </div>
     </div>
-    <edit-character
-      :character="character"
-      @update-character="$emit('updateCharacter', $event)"
-      :show="showModalEdit"
-      @hide-dialog="showModalEdit = $event"
-    />
   </div>
 </template>
 
 <script>
-import EditCharacter from './EditCharacter.vue';
-
 export default {
   name: 'Character',
 
@@ -72,15 +35,9 @@ export default {
     },
   },
 
-  components: {
-    EditCharacter,
-  },
-
   data() {
     return {
       isOver: false,
-      showDescription: false,
-      showModalEdit: false,
     };
   },
 
@@ -104,9 +61,11 @@ export default {
   top: 0
   color: red
   z-index: 10
-
 .info
-  height: 220px
+  height: 100px
+.info__separator
+  height: 5px
+  background-color: #F90716
 .info__over
   background-color: black
 .info_leave

@@ -31,7 +31,7 @@
         <div
           v-for="character in characters"
           :key="character.id"
-          class="column is-12-mobile is-6-tablet is-3-desktop"
+          class="column is-12-mobile is-6-tablet is-2-desktop"
         >
           <character
             :character="character"
