@@ -67,7 +67,7 @@ export default {
     let noResults = ref(false);
 
     const payload = {
-      limit: 20,
+      limit: 18,
       offset: 0,
       ts: process.env.VUE_APP_MARVEL_TS,
       apikey: process.env.VUE_APP_MARVEL_PUBLIC_KEY,
@@ -86,7 +86,7 @@ export default {
 
         if (bottomOfWindow && !query.value) {
           // Update paginator result
-          payload.offset += 20;
+          payload.offset += 18;
           fetchAllCharacter();
         }
       };

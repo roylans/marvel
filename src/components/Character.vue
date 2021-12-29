@@ -16,7 +16,7 @@
       ]"
     >
       <div class="content has-text-left">
-        <p class="title is-7 has-text-white inf__title">
+        <p class="title is-size-5-mobile is-size-5-tablet is-size-7-desktop has-text-white inf__title">
           {{ character.name }}
         </p>
       </div>
